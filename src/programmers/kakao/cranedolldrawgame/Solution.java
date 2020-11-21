@@ -1,9 +1,13 @@
-package programmers.kakao;
+package programmers.kakao.cranedolldrawgame;
 
 import java.util.Stack;
 
-public class CraneDollDrawGame {
 
+/**
+ * 2019 카카오 개발자 겨울 인턴십
+ * 크레인 인형뽑기
+ * */
+class Solution {
     public int solution(int[][] board, int[] moves) {
         int answer = 0;
 
@@ -29,9 +33,6 @@ public class CraneDollDrawGame {
 
         return answer;
     }
-
-
-
 }
 
 class Test{
@@ -46,6 +47,6 @@ class Test{
 
         int [] moves = {1, 5, 3, 5, 1, 2, 1, 4};
 
-        System.out.println(new CraneDollDrawGame().solution(board, moves));
+        System.out.println(new Solution().solution(board, moves));
     }
 }
