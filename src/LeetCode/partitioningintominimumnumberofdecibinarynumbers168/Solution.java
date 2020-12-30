@@ -1,7 +1,5 @@
 package LeetCode.partitioningintominimumnumberofdecibinarynumbers168;
 
-import java.util.Arrays;
-
 class Solution {
     public int minPartitions(String n) {
         int maxValue = 0;
