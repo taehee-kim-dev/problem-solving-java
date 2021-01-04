@@ -1,12 +1,11 @@
 package LeetCode.q1684;
 
-import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 class Solution {
     public int countConsistentStrings(String allowed, String[] words) {
-        Set<String> allowedChars = getAllowedCharsSet(allowed);
+        Set<Character> allowedChars = getAllowedCharsSet(allowed);
         int answer = 0;
         for (String word : words) {
             if (isConsistentString(allowedChars, word)) {
@@ -16,12 +15,24 @@ class Solution {
         return answer;
     }
 
-    private boolean isConsistentString(Set<String> allowedChars, String word) {
-        Set<String> wordDuplicateRemoved = Arrays.stream(word.split("")).collect(Collectors.toSet());
-        return allowedChars.containsAll(wordDuplicateRemoved);
+    private boolean isConsistentString(Set<Character> allowedChars, String word) {
+        Set<Character> wordSet = getWordSet(word);
+        return allowedChars.containsAll(wordSet);
     }
 
-    private Set<String> getAllowedCharsSet(String allowed) {
-        return Arrays.stream(allowed.split("")).collect(Collectors.toSet());
+    private Set<Character> getWordSet(String word) {
+        Set<Character> wordSet = new HashSet<>();
+        for (char charInWord : word.toCharArray()) {
+            wordSet.add(charInWord);
+        }
+        return wordSet;
+    }
+
+    private Set<Character> getAllowedCharsSet(String allowed) {
+        Set<Character> allowedCharsSet = new HashSet<>();
+        for (char allowedChar : allowed.toCharArray()) {
+            allowedCharsSet.add(allowedChar);
+        }
+        return allowedCharsSet;
     }
 }
