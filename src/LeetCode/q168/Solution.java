@@ -1,4 +1,4 @@
-package LeetCode.partitioningintominimumnumberofdecibinarynumbers168;
+package LeetCode.q168;
 
 class Solution {
     public int minPartitions(String n) {

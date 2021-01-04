@@ -1,4 +1,4 @@
-package LeetCode.queuereconstructionbyheight406;
+package LeetCode.q406;
 
 import java.util.Arrays;
 import java.util.LinkedList;

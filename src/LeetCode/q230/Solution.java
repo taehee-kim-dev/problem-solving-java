@@ -1,4 +1,4 @@
-package LeetCode.kthsmallestelementinabst230;
+package LeetCode.q230;
 
 class TreeNode {
     int val;

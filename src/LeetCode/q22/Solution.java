@@ -1,4 +1,4 @@
-package LeetCode.generateparentheses22;
+package LeetCode.q22;
 
 import java.util.ArrayList;
 import java.util.List;
